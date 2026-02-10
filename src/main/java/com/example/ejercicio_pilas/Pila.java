@@ -8,7 +8,7 @@ public class Pila<T> {
         pila = (T[]) new Object[capacidad];
     }
 
-    public void Push(T valor){
+    public void push(T valor){
         if (!estaLlena()) {
             tope++;
             pila[tope] = valor;
@@ -18,7 +18,7 @@ public class Pila<T> {
     }
 
 
-    public T Pop(){
+    public T pop(){
         if (!estaVacia()) {
             T valor = pila[tope];
             tope--;
@@ -39,11 +39,11 @@ public class Pila<T> {
 
     public static void main(String[] args) {
         Pila<Character> pila = new Pila<Character>(10);
-        pila.Push('C');
-        pila.Push('Y');
-        pila.Push('Z');
-        System.out.println(pila.Pop());
-        System.out.println(pila.Pop());
-        System.out.println(pila.Pop());
+        pila.push('C');
+        pila.push('Y');
+        pila.push('Z');
+        System.out.println(pila.pop());
+        System.out.println(pila.pop());
+        System.out.println(pila.pop());
     }
 }
